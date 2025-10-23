@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RΛVΞ — Portal Inmersivo 3D</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sidebar / HUD -->
+  <aside id="sidebar">
+    <div class="brand">
+      <span class="spark"></span>
+      <h1>⛓ RΛGΞ VENTURΞ</h1>
+    </div>
+    <nav>
+      <a href="#intro" data-go>Intro</a>
+      <a href="#eventos" data-go>Eventos</a>
+      <a href="#vinyl" data-go>Vinyl</a>
+      <a href="#contacto" data-go>Contacto</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" id="toggleFx">FX: ON</a>
+    </nav>
+    <footer>
+      <small>© 2025 Rave Studio</small>
+    </footer>
+  </aside>
+
+  <!-- Three.js Background -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <!-- Main content -->
+  <main id="content">
+    <!-- HERO -->
+    <section id="intro" class="panel hero snap">
+      <div class="marquee" aria-hidden="true">
+        <span>NEVERLAND • PORTAL 3D • MICROINTERACCIONES • LUCES REACTIVAS • </span>
+        <span>NEVERLAND • PORTAL 3D • MICROINTERACCIONES • LUCES REACTIVAS • </span>
+      </div>
+
+      <header class="hero-copy">
+        <h2>RAGE VENTURE</h2>
+        <p>TDesliza para entrar.</p>
+        <button class="cta" data-go="#eventos">Entrar</button>
+      </header>
+
+      <div class="badges">
+        <div class="badge">WebGL</div>
+        <div class="badge">Scroll Reactive</div>
+        <div class="badge">Micro UX</div>
+      </div>
+    </section>
+
+    <!-- EVENTOS: vertical snap panels -->
+    <section id="eventos" class="panel snap">
+      <h3>Próximos eventos</h3>
+      <div class="cards">
+        <article class="card tilt" data-hue="310">
+          <div class="card-body">
+            <h4>Neon Rave — Quito</h4>
+            <p>Viernes 31 • Warehouse 12 • Line-up: KØRA, MxR, TΛL.</p>
+            <button class="ghost">Tickets</button>
+          </div>
+        </article>
+        <article class="card tilt" data-hue="200">
+          <div class="card-body">
+            <h4>Afterglow — Cuenca</h4>
+            <p>Sábado 08 • Fábrica 88 • Vinyl set: LUX, NVM, Cian.</p>
+            <button class="ghost">Tickets</button>
+          </div>
+        </article>
+        <article class="card tilt" data-hue="110">
+          <div class="card-body">
+            <h4>Midnight Pulse — Guayaquil</h4>
+            <p>Viernes 21 • Docks • Live modular: VEX, OXI, Rho.</p>
+            <button class="ghost">Tickets</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- H-SCROLL gallery / Vinyl shop -->
+    <section id="vinyl" class="panel snap hwrap">
+      <h3>Vinyl Exclusivo</h3>
+      <div class="hscroll" id="vinylScroll">
+        <article class="vcard tilt">
+          <div class="disc"></div>
+          <h5>RΛVΞ 001 — Pulse</h5>
+          <p>Edición limitada • 180g • Holographic center.</p>
+          <button class="ghost">Comprar</button>
+        </article>
+        <article class="vcard tilt">
+          <div class="disc"></div>
+          <h5>RΛVΞ 002 — Bloom</h5>
+          <p>Vinilo translúcido • Incluye poster A3.</p>
+          <button class="ghost">Comprar</button>
+        </article>
+        <article class="vcard tilt">
+          <div class="disc"></div>
+          <h5>RΛVΞ 003 — Drift</h5>
+          <p>Picture disc • Arte por @neverland.</p>
+          <button class="ghost">Comprar</button>
+        </article>
+        <article class="vcard tilt">
+          <div class="disc"></div>
+          <h5>RΛVΞ 004 — Flux</h5>
+          <p>Vinilo color nube • Slipmat free.</p>
+          <button class="ghost">Comprar</button>
+        </article>
+      </div>
+      <p class="hint">Usa la rueda del mouse para desplazarte <strong>horizontalmente</strong>.</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="panel snap">
+      <h3>Contacto</h3>
+      <form class="glass form">
+        <label>Nombre
+          <input type="text" placeholder="Tu nombre" required>
+        </label>
+        <label>Email
+          <input type="email" placeholder="tucorreo@ejemplo.com" required>
+        </label>
+        <label>Mensaje
+          <textarea rows="4" placeholder="Cuéntanos tu idea…"></textarea>
+        </label>
+        <button class="cta">Enviar</button>
+      </form>
+      <div class="footer-note">Hecho con Three.js + amor por los sintetizadores.</div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
